@@ -1,4 +1,6 @@
-class SquareBracket::HTMLRender
+require 'redcarpet'
+
+class SquareBracket::HTMLRender < Redcarpet::Render::HTML
   include SquareBracket::Postprocess
 
   def initialize(processor, *params)
